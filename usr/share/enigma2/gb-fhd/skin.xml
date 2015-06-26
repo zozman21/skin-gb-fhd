@@ -70,7 +70,7 @@
     <alias name="PlayList" font="Regular" size="28" height="50"/>
     <alias name="fstabMenuList" font="Regular" size="28" height="50"/>
     <alias name="PiconManagerList" font="Regular" size="28" height="50"/>
-	<alias name="RSList" font="Regular" size="28" height="50"/>	
+    <alias name="RSList" font="Regular" size="28" height="50"/>
   </fonts>
   <subtitles>
     <sub font="Regular;35" name="Subtitle_TTX" shadowColor="#shadow" shadowOffset="3,3" />
@@ -612,14 +612,14 @@
     <widget position="428,470" render="Listbox" scrollbarMode="showOnDemand" size="1100,525" source="streams" transparent="1" zPosition="3">
       <convert type="TemplatedMultiContent">
                                {"templates":
-                               {"default": (50, [ 
+                               {"default": (50, [
                                MultiContentEntryText(pos = (0, 5), size = (35, 35),  font = 0, flags = RT_HALIGN_LEFT,  text = 1), # key,
                                MultiContentEntryText(pos = (10, 5), size = (50, 35),  font = 0, flags = RT_HALIGN_LEFT,  text = 2), # number,
                                MultiContentEntryText(pos = (80, 5), size = (300, 35),  font = 0, flags = RT_HALIGN_LEFT,  text = 3), # description,
                                MultiContentEntryText(pos = (380, 5), size = (400, 35), font = 0, flags = RT_HALIGN_LEFT,  text = 4), # language,
                                MultiContentEntryText(pos = (950, 5), size = (25, 35),  font = 1, flags = RT_HALIGN_RIGHT, text = 5), # selection,
                                ], True, "showNever"),
-                               "notselected": (50, [ 
+                               "notselected": (50, [
                                MultiContentEntryText(pos = (0, 5),   size = (35, 35),  font = 0, flags = RT_HALIGN_LEFT,  text = 1), # key,
                                MultiContentEntryText(pos = (10, 5),  size = (50, 35),  font = 0, flags = RT_HALIGN_LEFT,  text = 2), # number,
                                MultiContentEntryText(pos = (80, 5), size = (300, 35),  font = 0, flags = RT_HALIGN_LEFT,  text = 3), # description,
@@ -1253,7 +1253,7 @@
       <convert type="TemplatedMultiContent">
                     {"template":[
                     MultiContentEntryPixmapAlphaBlend(pos=(12,5),size=(32,32),png=0),
-                    MultiContentEntryText(pos=(58,3),size=(980,45),font=0,flags=RT_HALIGN_LEFT|RT_VALIGN_TOP,text=1), 
+                    MultiContentEntryText(pos=(58,3),size=(980,45),font=0,flags=RT_HALIGN_LEFT|RT_VALIGN_TOP,text=1),
                     ],
                     "fonts":[gFont("Regular",28) ],"itemHeight":50}
           </convert>
@@ -1283,7 +1283,7 @@
       <convert type="TemplatedMultiContent">
                     {"template":[
                     MultiContentEntryText(pos=(12,10),size=(900,45),font=0,flags=RT_HALIGN_LEFT|RT_VALIGN_TOP,text=0),
-                    MultiContentEntryPixmapAlphaBlend(pos=(950,5),size=(40,40),png=1), 
+                    MultiContentEntryPixmapAlphaBlend(pos=(950,5),size=(40,40),png=1),
                     ],
                     "fonts":[gFont("Regular",28) ],"itemHeight":50}
           </convert>
@@ -1318,7 +1318,7 @@
       <convert type="TemplatedMultiContent">
                     {"template":[
                     MultiContentEntryText(pos=(12,10),size=(900,45),font=0,flags=RT_HALIGN_LEFT|RT_VALIGN_TOP,text=0),
-                    MultiContentEntryPixmapAlphaBlend(pos=(950,5),size=(40,40),png=1), 
+                    MultiContentEntryPixmapAlphaBlend(pos=(950,5),size=(40,40),png=1),
                     ],
                     "fonts":[gFont("Regular",28) ],"itemHeight":50}
           </convert>
@@ -3276,15 +3276,15 @@
     <eLabel backgroundColor="StyleDarkRed" position="170,175" size="1070,3" zPosition="2" foregroundColor="StyleDarkRed" />
     <widget source="config" render="Listbox" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="StyleDarkblue1" foregroundColor="StyleFont1" position="170,190" size="1070,730" transparent="1">
       <convert type="TemplatedMultiContent">
-				{"template": [
-				MultiContentEntryText(pos = (90,7),size = (870,45),font=0,flags = RT_HALIGN_LEFT,text = 0),# index 2 is the Menu Titel
-				MultiContentEntryText(pos = (105,52),size = (855,40),font=1,flags = RT_HALIGN_LEFT,text = 2),# index 3 is the Description
-				MultiContentEntryPixmapAlphaTest(pos = (15,10),size = (72,72),png = 3),# index 4 is the pixmap
-				],
-				"fonts": [gFont("Regular",30),gFont("Regular",26)],
-				"itemHeight": 90
-				}
-			</convert>
+        {"template": [
+        MultiContentEntryText(pos = (90,7),size = (870,45),font=0,flags = RT_HALIGN_LEFT,text = 0),# index 2 is the Menu Titel
+        MultiContentEntryText(pos = (105,52),size = (855,40),font=1,flags = RT_HALIGN_LEFT,text = 2),# index 3 is the Description
+        MultiContentEntryPixmapAlphaTest(pos = (15,10),size = (72,72),png = 3),# index 4 is the pixmap
+        ],
+        "fonts": [gFont("Regular",30),gFont("Regular",26)],
+        "itemHeight": 90
+        }
+      </convert>
     </widget>
     <widget source="introduction" render="Label" font="Regular; 32" backgroundColor="StyleDarkblue1" foregroundColor="StyleFont1" halign="left" position="170,925" size="1070,50" transparent="1" valign="top" />
     <!--  Buttons  -->
@@ -3316,18 +3316,18 @@
     <eLabel backgroundColor="StyleDarkRed" position="170,230" size="1070,3" zPosition="2" foregroundColor="StyleDarkRed" />
     <widget source="config" render="Listbox" backgroundColor="StyleDarkblue1" foregroundColor="StyleFont1" scrollbarMode="showOnDemand" enableWrapAround="1" position="170,240" size="1070,675" transparent="1">
       <convert type="TemplatedMultiContent">
-                       {"template": [
-                        MultiContentEntryPixmapAlphaBlend(pos = (10, 2), size = (68, 68), png = 0), # index 0 is the isMounted pixmap
-						MultiContentEntryText(pos = (100, 0), size = (300, 35), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 1), # index 1 is the sharename
-						MultiContentEntryText(pos = (500, 5), size = (250, 30), font=1, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 2), # index 2 is the IPdescription
-						MultiContentEntryText(pos = (100, 37), size = (450, 30), font=1, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 3), # index 3 is the DIRdescription
-						MultiContentEntryPixmapAlphaBlend(pos = (960, 20), size = (68, 68), png = 4), # index 4 is the activepng pixmap
-						MultiContentEntryPixmapAlphaBlend(pos = (1010, 2), size = (68, 68), png = 5), # index 4 is the mounttype pixmap
-                    ],
-                "fonts": [gFont("Regular",30),gFont("Regular",26)],
-                "itemHeight": 75
-                }
-            </convert>
+        {"template": [
+        MultiContentEntryPixmapAlphaBlend(pos = (10, 2), size = (68, 68), png = 0), # index 0 is the isMounted pixmap
+        MultiContentEntryText(pos = (100, 0), size = (300, 35), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 1), # index 1 is the sharename
+        MultiContentEntryText(pos = (500, 5), size = (250, 30), font=1, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 2), # index 2 is the IPdescription
+        MultiContentEntryText(pos = (100, 37), size = (450, 30), font=1, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 3), # index 3 is the DIRdescription
+        MultiContentEntryPixmapAlphaBlend(pos = (960, 20), size = (68, 68), png = 4), # index 4 is the activepng pixmap
+        MultiContentEntryPixmapAlphaBlend(pos = (1010, 2), size = (68, 68), png = 5), # index 4 is the mounttype pixmap
+        ],
+        "fonts": [gFont("Regular",30),gFont("Regular",26)],
+        "itemHeight": 75
+        }
+      </convert>
     </widget>
     <widget source="introduction" render="Label" font="Regular; 32" backgroundColor="StyleDarkblue1" foregroundColor="StyleFont1" halign="left" position="170,925" size="1070,50" transparent="1" valign="top" />
     <!--  Buttons  -->
@@ -4194,22 +4194,22 @@
     <eLabel text="Plugin manager" font="Regular; 34" backgroundColor="StyleBackground" halign="left" position="170,42" size="1145,50" transparent="1" valign="center" />
     <widget source="list" render="Listbox" backgroundColor="StyleDarkblue1" foregroundColor="StyleFont1" scrollbarMode="showOnDemand" enableWrapAround="1" position="170,210" size="1170,738" transparent="1">
       <convert type="TemplatedMultiContent">
-				{"templates":
-				{"default": (82,[
-				MultiContentEntryText(pos = (10,3),  size = (975,42), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
-				MultiContentEntryText(pos = (10,45), size = (975,38), font=1, flags = RT_HALIGN_LEFT, text = 2), # index 2 is the description
-				MultiContentEntryPixmapAlphaTest(pos = (1000,17), size = (48,48), png = 5), # index 5 is the status pixmap
-				MultiContentEntryPixmapAlphaTest(pos = (0,80), size = (1110,3), png = 6), # index 6 is the div pixmap
-				]),
-				"category": (82,[
-				MultiContentEntryText(pos = (10,1), size = (1050,42), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
-				MultiContentEntryText(pos = (10,42), size = (1050,38), font=2, flags = RT_HALIGN_LEFT, text = 1), # index 1 is the description
-				MultiContentEntryPixmapAlphaTest(pos = (0,73), size = (1110,3), png = 3), # index 3 is the div pixmap
-				])
-				},
-				"fonts": [gFont("Regular",30),gFont("Regular",26),gFont("Regular",24)],
-				"itemHeight": 82
-				}
+        {"templates":
+        {"default": (82,[
+        MultiContentEntryText(pos = (10,3),  size = (975,42), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
+        MultiContentEntryText(pos = (10,45), size = (975,38), font=1, flags = RT_HALIGN_LEFT, text = 2), # index 2 is the description
+        MultiContentEntryPixmapAlphaTest(pos = (1000,17), size = (48,48), png = 5), # index 5 is the status pixmap
+        MultiContentEntryPixmapAlphaTest(pos = (0,80), size = (1110,3), png = 6), # index 6 is the div pixmap
+        ]),
+        "category": (82,[
+        MultiContentEntryText(pos = (10,1), size = (1050,42), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
+        MultiContentEntryText(pos = (10,42), size = (1050,38), font=2, flags = RT_HALIGN_LEFT, text = 1), # index 1 is the description
+        MultiContentEntryPixmapAlphaTest(pos = (0,73), size = (1110,3), png = 3), # index 3 is the div pixmap
+        ])
+        },
+        "fonts": [gFont("Regular",30),gFont("Regular",26),gFont("Regular",24)],
+        "itemHeight": 82
+        }
       </convert>
     </widget>
     <eLabel backgroundColor="StyleDarkRed" position="170,185" size="1170,3" zPosition="2" foregroundColor="StyleDarkRed" />
@@ -4244,14 +4244,14 @@
     <eLabel text="PluginManagerInfo" font="Regular; 34" backgroundColor="StyleBackground" halign="left" position="170,42" size="1145,50" transparent="1" valign="center" />
     <widget source="list" render="Listbox" backgroundColor="StyleDarkblue1" foregroundColor="StyleFont1" scrollbarMode="showOnDemand" enableWrapAround="1" position="170,200" size="1170,750" transparent="1">
       <convert type="TemplatedMultiContent">
-				{"template": [
-				MultiContentEntryPixmapAlphaTest(pos = (27,21),size = (72,72),png = 2),# index 2 is the status pixmap
-				MultiContentEntryText(pos = (135,7),size = (975,39),font=0,flags = RT_HALIGN_LEFT,text = 0),# index 0 is the name
-				MultiContentEntryText(pos = (135,49),size = (975,57),font=1,flags = RT_HALIGN_LEFT,text = 1),# index 1 is the state
-				],
-				"fonts": [gFont("Regular",30),gFont("Regular",26)],
-				"itemHeight": 112
-				}
+        {"template": [
+        MultiContentEntryPixmapAlphaTest(pos = (27,21),size = (72,72),png = 2),# index 2 is the status pixmap
+        MultiContentEntryText(pos = (135,7),size = (975,39),font=0,flags = RT_HALIGN_LEFT,text = 0),# index 0 is the name
+        MultiContentEntryText(pos = (135,49),size = (975,57),font=1,flags = RT_HALIGN_LEFT,text = 1),# index 1 is the state
+        ],
+        "fonts": [gFont("Regular",30),gFont("Regular",26)],
+        "itemHeight": 112
+        }
       </convert>
     </widget>
     <eLabel backgroundColor="StyleDarkRed" position="170,185" size="1170,3" zPosition="2" foregroundColor="StyleDarkRed" />
@@ -5458,7 +5458,7 @@
     <eLabel text="Select input device" font="Regular; 34" backgroundColor="StyleBackground" halign="left" position="170,42" size="1145,50" transparent="1" valign="center" />
     <widget source="list" render="Listbox" backgroundColor="StyleDarkblue1" foregroundColor="StyleFont1" scrollbarMode="showOnDemand" enableWrapAround="1" position="170,125" size="1020,715" transparent="1">
       <convert type="TemplatedMultiContent">
-                       {"template": 
+                       {"template":
                            [ MultiContentEntryPixmapAlphaTest(pos = (5, 10), size = (54, 54), png = 2), # index 3 is the interface pixmap
                            MultiContentEntryText(pos = (65, 5), size = (1100, 55), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER|RT_WRAP, text = 1), # index 1 is the interfacename
                            ],
@@ -6636,7 +6636,7 @@
       <convert type="TemplatedMultiContent">
                 {"template":[
                 MultiContentEntryPixmapAlphaBlend(pos=(12,7),size=(32,32),png=0),
-                MultiContentEntryText(pos=(58,7),size=(1100,42),font=0,flags=RT_HALIGN_LEFT|RT_VALIGN_TOP,text=1), 
+                MultiContentEntryText(pos=(58,7),size=(1100,42),font=0,flags=RT_HALIGN_LEFT|RT_VALIGN_TOP,text=1),
                 ],
                 "fonts":[gFont("Regular",28) ],"itemHeight":50}
             </convert>
@@ -7276,15 +7276,15 @@
     <eLabel text="Partitions" font="Regular; 34" backgroundColor="StyleBackground" halign="left" position="170,42" size="1145,50" transparent="1" valign="center" />
     <widget source="menu" render="Listbox" backgroundColor="StyleDarkblue1" foregroundColor="StyleFont1" scrollbarMode="showOnDemand" enableWrapAround="1" position="170,125" size="1120,780" transparent="1">
       <convert type="TemplatedMultiContent">
-			        {"template": [
-				MultiContentEntryPixmapAlphaTest(pos = (10, 5), size = (80, 80), png = 0),
-				MultiContentEntryText(pos = (85, 10), size = (600, 45), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1),
-				MultiContentEntryText(pos = (700, 10), size = (425, 45), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 2),
-				],
-				"fonts": [gFont("Regular", 28)],
-				"itemHeight": 95
-				}
-			</convert>
+        {"template": [
+        MultiContentEntryPixmapAlphaTest(pos = (10, 5), size = (80, 80), png = 0),
+        MultiContentEntryText(pos = (85, 10), size = (600, 45), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1),
+        MultiContentEntryText(pos = (700, 10), size = (425, 45), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 2),
+        ],
+        "fonts": [gFont("Regular", 28)],
+        "itemHeight": 95
+        }
+      </convert>
     </widget>
     <!--  Line / Label / Png  -->
     <ePixmap pixmap="gb-fhd/back/877.png" alphatest="blend" position="1305,103" size="171,877" zPosition="-1" />
@@ -7318,15 +7318,15 @@
     <eLabel text="Device List" font="Regular; 34" backgroundColor="StyleBackground" halign="left" position="170,42" size="1145,50" transparent="1" valign="center" />
     <widget source="menu" render="Listbox" backgroundColor="StyleDarkblue1" foregroundColor="StyleFont1" scrollbarMode="showOnDemand" enableWrapAround="1" position="170,125" size="1120,780" transparent="1">
       <convert type="TemplatedMultiContent">
-			        {"template": [
-				MultiContentEntryPixmapAlphaTest(pos = (10, 5), size = (80, 80), png = 0),
-				MultiContentEntryText(pos = (85, 10), size = (600, 45), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1),
-				MultiContentEntryText(pos = (700, 10), size = (425, 45), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 2),
-				],
-				"fonts": [gFont("Regular", 28)],
-				"itemHeight": 95
-				}
-			</convert>
+        {"template": [
+        MultiContentEntryPixmapAlphaTest(pos = (10, 5), size = (80, 80), png = 0),
+        MultiContentEntryText(pos = (85, 10), size = (600, 45), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1),
+        MultiContentEntryText(pos = (700, 10), size = (425, 45), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 2),
+        ],
+        "fonts": [gFont("Regular", 28)],
+        "itemHeight": 95
+        }
+      </convert>
     </widget>
     <!--  Line / Label / Png  -->
     <ePixmap pixmap="gb-fhd/back/877.png" alphatest="blend" position="1305,103" size="171,877" zPosition="-1" />
