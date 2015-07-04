@@ -1,5 +1,5 @@
 <skin>
-	<!-- gb-fhd Skin v1.10 by SSD for GigaBlue/OpenMips -->
+	<!-- gb-fhd Skin v1.20 by SSD for GigaBlue/OpenMips -->
 	<!-- Recommended to use with XPicons (220x132) -->
 	<!-- You are not allowed to modify and redistribute gb-fhd Skin and all graphics -->
 	<output id="0">
@@ -171,168 +171,168 @@
 		<parameter name="HotkeySetupSelectIcon" value="15, 0, 90, 76" />
 	</parameters>
 	<screen backgroundColor="transparent" flags="wfNoBorder" name="InfoBar" position="center,center" size="1920,1080" title="InfoBar">
-	<ePixmap pixmap="gb-fhd/back/infobar_new1A.png" position="center,710" size="1920,358" zPosition="-10" />
-	<ePixmap pixmap="gb-fhd/back/xtra_bar.png" position="center,10" size="1300,60" zPosition="-10" />
-	<!--	Picon	-->
-	<widget alphatest="blend" position="67,729" render="StyleXPicon" size="220,132" source="session.CurrentService" transparent="1" zPosition="4">
-		<convert type="ServiceName">Reference</convert>
-	</widget>
-	<!--	Event Now	-->
-	<widget backgroundColor="black" font="Regular; 40" foregroundColor="StyleSelection2" halign="left" render="StyleRunText" options="movetype=running,startpoint=0,direction=left,steptime=40,repeat=5,startdelay=2000,always=0" position="520,940" size="950,55" source="session.Event_Now" transparent="1">
-		<convert type="EventName">Name</convert>
-	</widget>
-	<widget font="Regular; 40" halign="left" valign="center" noWrap="1" position="520,1003" render="StyleRunText" options="movetype=running,startpoint=0,direction=left,steptime=40,repeat=5,startdelay=2000,always=0" size="950,55" source="session.Event_Next" backgroundColor="black" transparent="1" zPosition="1" foregroundColor="StyleSelection2">
-		<convert type="EventName">Name</convert>
-	</widget>
-	<widget backgroundColor="black" font="Regular; 32" foregroundColor="StyleSelection2" halign="left" position="315,948" render="Label" size="100,40" source="session.Event_Now" transparent="1">
-		<convert type="EventTime">StartTime</convert>
-		<convert type="ClockToText">Format:%H:%M</convert>
-	</widget>
-	<widget backgroundColor="black" font="Regular; 32" foregroundColor="StyleSelection2" halign="right" position="415,948" render="Label" size="100,40" source="session.Event_Now" transparent="1">
-		<convert type="EventTime">EndTime</convert>
-		<convert type="ClockToText">Format:%H:%M</convert>
-	</widget>
-	<widget backgroundColor="black" font="Regular; 32" foregroundColor="StyleSelection2" halign="right" position="1470,946" render="Label" size="150,45" source="session.Event_Now" transparent="1">
-		<convert type="EventTime">Remaining</convert>
-		<convert type="RemainingToText">InMinutes</convert>
-	</widget>
-	<eLabel backgroundColor="StyleLine" position="315,998" size="1305,3" zPosition="2" />
-	<widget position="315,997" render="Progress" size="1305,7" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="StyleDarkRed">
-		<convert type="EventTime">Progress</convert>
-	</widget>
-	<!--	Event Next	-->
-	<widget backgroundColor="black" font="Regular; 32" foregroundColor="StyleSelection2" halign="left" position="315,1011" render="Label" size="100,40" source="session.Event_Next" transparent="1">
-		<convert type="EventTime">StartTime</convert>
-		<convert type="ClockToText">Format:%H:%M</convert>
-	</widget>
-	<widget backgroundColor="black" font="Regular; 32" foregroundColor="StyleSelection2" halign="right" position="415,1011" render="Label" size="100,40" source="session.Event_Next" transparent="1">
-		<convert type="EventTime">EndTime</convert>
-		<convert type="ClockToText">Format:%H:%M</convert>
-	</widget>
-	<widget backgroundColor="black" font="Regular; 32" foregroundColor="StyleSelection2" halign="right" position="1470,1009" render="Label" size="150,45" source="session.Event_Next" transparent="1">
-		<convert type="EventTime">Duration</convert>
-		<convert type="ClockToText">InMinutes</convert>
-	</widget>
-	<!--	Channel Number and Name	-->
-	<widget source="session.CurrentService" render="ChannelNumber" backgroundColor="StyleBackground" font="Regular; 40" foregroundColor="StyleFont2" halign="right" position="693,878" size="105,55" transparent="1" valign="center" zPosition="1" />
-	<widget source="session.CurrentService" render="Label" position="810,880" size="430,55" backgroundColor="StyleBackground" font="Regular; 40" foregroundColor="StyleFont2" transparent="1" halign="left">
-		<convert type="ServiceName">Name</convert>
-	</widget>
-	<widget source="session.CurrentService" render="Label" position="1242,887" size="300,40" halign="left" zPosition="4" transparent="1" backgroundColor="StyleBackground" font="Regular; 28">
-		<convert type="ServiceName">Provider</convert>
-	</widget>
-	<!--	Icons	-->
-	<!---->
-	<widget alphatest="blend" pixmap="gb-fhd/icons/ico_hd_on.png" position="315,883" render="Pixmap" size="34,45" source="session.CurrentService" zPosition="2">
-		<convert type="ServiceInfo">VideoWidth</convert>
-		<convert type="ValueRange">721,1980</convert>
-		<convert type="ConditionalShowHide" />
-	</widget>
-	<ePixmap alphatest="blend" pixmap="gb-fhd/icons/ico_hd_off.png" position="315,883" size="34,45" zPosition="1" />
-	<!---->
-	<widget alphatest="blend" pixmap="gb-fhd/icons/ico_format_on.png" position="359,883" render="Pixmap" size="58,45" source="session.CurrentService" zPosition="2">
-		<convert type="ServiceInfo">IsWidescreen</convert>
-		<convert type="ConditionalShowHide" />
-	</widget>
-	<ePixmap alphatest="blend" pixmap="gb-fhd/icons/ico_format_off.png" position="359,883" size="58,45" zPosition="1" />
-	<!---->
-	<widget alphatest="blend" pixmap="gb-fhd/icons/ico_dolby_on.png" position="427,883" render="Pixmap" size="72,45" source="session.CurrentService" zPosition="2">
-		<convert type="ServiceInfo">IsMultichannel</convert>
-		<convert type="ConditionalShowHide" />
-	</widget>
-	<ePixmap alphatest="blend" pixmap="gb-fhd/icons/ico_dolby_off.png" position="427,883" size="72,45" />
-	<!---->
-	<widget alphatest="blend" pixmap="gb-fhd/icons/ico_txt_on.png" position="509,883" render="Pixmap" size="51,45" source="session.CurrentService" zPosition="5">
-		<convert type="ServiceInfo">HasTelext</convert>
-		<convert type="ConditionalShowHide" />
-	</widget>
-	<ePixmap alphatest="blend" pixmap="gb-fhd/icons/ico_txt_off.png" position="509,883" size="51,45" />
-	<!---->
-	<widget alphatest="blend" pixmap="gb-fhd/icons/ico_rec_on.png" position="570,883" render="Pixmap" size="44,45" source="session.RecordState" zPosition="2">
-		<convert type="ConditionalShowHide">Blink</convert>
-	</widget>
-	<ePixmap alphatest="blend" pixmap="gb-fhd/icons/ico_rec_off.png" position="570,883" size="44,45" />
-	<!---->
-	<widget alphatest="blend" pixmap="gb-fhd/icons/ico_crypt_on.png" position="624,883" render="Pixmap" size="68,45" source="session.CurrentService" zPosition="2">
-		<convert type="ServiceInfo">IsCrypted</convert>
-		<convert type="ConditionalShowHide" />
-	</widget>
-	<ePixmap alphatest="blend" pixmap="gb-fhd/icons/ico_crypt_off.png" position="624,883" size="68,45" />
-	<!--	Tuner	-->
-	<!--A-->
-	<widget source="session.FrontendInfo" alphatest="blend" pixmap="gb-fhd/icons/tunera_on.png" position="125,885" render="Pixmap" size="100,40" zPosition="4">
-		<convert type="FrontendInfo">NUMBER</convert>
-		<convert type="ValueRange">0,0</convert>
-		<convert type="ConditionalShowHide" />
-	</widget>
-	<!--B-->
-	<widget source="session.FrontendInfo" alphatest="blend" pixmap="gb-fhd/icons/tunerb_on.png" position="125,885" render="Pixmap" size="100,40" zPosition="4">
-		<convert type="FrontendInfo">NUMBER</convert>
-		<convert type="ValueRange">1,1</convert>
-		<convert type="ConditionalShowHide" />
-	</widget>
-	<!--C-->
-	<widget source="session.FrontendInfo" alphatest="blend" pixmap="gb-fhd/icons/tunerc_on.png" position="125,885" render="Pixmap" size="100,40" zPosition="4">
-		<convert type="FrontendInfo">NUMBER</convert>
-		<convert type="ValueRange">2,2</convert>
-		<convert type="ConditionalShowHide" />
-	</widget>
-	<!--D-->
-	<widget source="session.FrontendInfo" alphatest="blend" pixmap="gb-fhd/icons/tunerd_on.png" position="125,885" render="Pixmap" size="100,40" zPosition="4">
-		<convert type="FrontendInfo">NUMBER</convert>
-		<convert type="ValueRange">3,3</convert>
-		<convert type="ConditionalShowHide" />
-	</widget>
-	<!--	ScreenTv	-->
-	<!--	SNR/AGC	-->
-	<eLabel backgroundColor="rds_text_bg" font="Regular; 24" halign="left" name="snr" position="98,940" size="70,30" text="SNR:" transparent="1" />
-	<widget backgroundColor="rds_text_bg" font="Regular; 24" halign="right" position="163,940" render="Label" size="85,30" source="session.FrontendStatus" transparent="1">
-		<convert type="FrontendInfo">SNR</convert>
-	</widget>
-	<widget source="session.FrontendStatus" render="Progress" position="98,970" size="150,12" zPosition="100" pixmap="gb-fhd/icons/snr_bar.png" transparent="1" borderWidth="2" borderColor="white">
-		<convert type="FrontendInfo">SNR</convert>
-	</widget>
-	<eLabel backgroundColor="rds_text_bg" font="Regular; 24" halign="left" name="agc" position="98,995" size="73,30" text="AGC:" transparent="1" />
-	<widget backgroundColor="rds_text_bg" font="Regular; 24" halign="right" position="163,995" render="Label" size="85,30" source="session.FrontendStatus" transparent="1">
-		<convert type="FrontendInfo">AGC</convert>
-	</widget>
-	<widget source="session.FrontendStatus" render="Progress" position="98,1025" size="150,12" zPosition="100" pixmap="gb-fhd/icons/agc_bar.png" transparent="1" borderWidth="2" borderColor="white">
-		<convert type="FrontendInfo">AGC</convert>
-	</widget>
-	<!--	Temperatur	-->
-	<ePixmap alphatest="blend" pixmap="gb-fhd/menu_png/temp2.png" position="1695,992" size="50,50" />
-	<ePixmap alphatest="blend" pixmap="gb-fhd/menu_png/cpu.png" position="1705,946" size="30,30" />
-	<eLabel text="SYS :" name="sys" backgroundColor="rds_text_bg" foregroundColor="StyleFont1" font="Regular; 23" halign="right" position="1735,984" size="80,36" zPosition="1" transparent="1" />
-	<widget source="global.CurrentTime" render="Style_SYSTemp" position="1820,981" size="80,36" font="Regular; 24" halign="center" valign="center" foregroundColor="StyleFont1" backgroundColor="rds_text_bg" transparent="1" zPosition="2" />
-	<eLabel text="CPU :" name="cpu" backgroundColor="rds_text_bg" foregroundColor="StyleFont1" font="Regular; 23" halign="right" position="1735,947" size="80,36" zPosition="1" transparent="1" />
-	<widget source="session.CurrentService" render="Label" position="1820,944" size="80,36" font="Regular; 24" halign="center" valign="center" foregroundColor="StyleFont1" backgroundColor="rds_text_bg" transparent="1" zPosition="5">
-		<convert type="StyleCpuUsage">
-		</convert>
-	</widget>
-	<eLabel text="HDD :" name="sys" backgroundColor="rds_text_bg" foregroundColor="StyleFont1" font="Regular; 23" halign="right" position="1735,1020" size="80,36" zPosition="1" transparent="1" />
-	<widget backgroundColor="rds_text_bg" font="Regular; 24" foregroundColor="StyleFont1" halign="right" position="1820,1019" render="Label" size="40,36" source="session.CurrentService" transparent="1" valign="center">
-		<convert type="StyleDiskInfo">HddTemp,Full</convert>
-	</widget>
-	<eLabel text="°C" position="1861,1016" size="40,36" font="Regular; 24" halign="left" backgroundColor="rds_text_bg" foregroundColor="StyleFont1" transparent="1" zPosition="2" valign="center" />
+		<ePixmap pixmap="gb-fhd/back/infobar_new1A.png" position="center,710" size="1920,358" zPosition="-10" />
+		<ePixmap pixmap="gb-fhd/back/xtra_bar.png" position="center,10" size="1300,60" zPosition="-10" />
+		<!--	Picon	-->
+		<widget alphatest="blend" position="67,729" render="StyleXPicon" size="220,132" source="session.CurrentService" transparent="1" zPosition="4">
+			<convert type="ServiceName">Reference</convert>
+		</widget>
+		<!--	Event Now	-->
+		<widget backgroundColor="black" font="Regular; 40" foregroundColor="StyleFont1" halign="left" render="StyleRunText" options="movetype=running,startpoint=0,direction=left,steptime=40,repeat=5,startdelay=2000,always=0" position="520,940" size="950,55" source="session.Event_Now" transparent="1">
+			<convert type="EventName">Name</convert>
+		</widget>
+		<widget font="Regular; 40" foregroundColor="StyleFont1" halign="left" valign="center" noWrap="1" position="520,1003" render="StyleRunText" options="movetype=running,startpoint=0,direction=left,steptime=40,repeat=5,startdelay=2000,always=0" size="950,55" source="session.Event_Next" backgroundColor="black" transparent="1" zPosition="1">
+			<convert type="EventName">Name</convert>
+		</widget>
+		<widget backgroundColor="black" font="Regular; 32" halign="left" position="315,948" render="Label" size="100,40" source="session.Event_Now" transparent="1">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="ClockToText">Format:%H:%M</convert>
+		</widget>
+		<widget backgroundColor="black" font="Regular; 32" halign="right" position="415,948" render="Label" size="100,40" source="session.Event_Now" transparent="1">
+			<convert type="EventTime">EndTime</convert>
+			<convert type="ClockToText">Format:%H:%M</convert>
+		</widget>
+		<widget backgroundColor="black" font="Regular; 32" halign="right" position="1470,946" render="Label" size="150,45" source="session.Event_Now" transparent="1">
+			<convert type="EventTime">Remaining</convert>
+			<convert type="RemainingToText">InMinutes</convert>
+		</widget>
+		<eLabel backgroundColor="StyleLine" position="315,998" size="1305,3" zPosition="2" />
+		<widget position="315,997" render="Progress" size="1305,7" source="session.Event_Now" transparent="1" zPosition="7" foregroundColor="StyleDarkRed">
+			<convert type="EventTime">Progress</convert>
+		</widget>
+		<!--	Event Next	-->
+		<widget backgroundColor="black" font="Regular; 32" halign="left" position="315,1011" render="Label" size="100,40" source="session.Event_Next" transparent="1">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="ClockToText">Format:%H:%M</convert>
+		</widget>
+		<widget backgroundColor="black" font="Regular; 32" halign="right" position="415,1011" render="Label" size="100,40" source="session.Event_Next" transparent="1">
+			<convert type="EventTime">EndTime</convert>
+			<convert type="ClockToText">Format:%H:%M</convert>
+		</widget>
+		<widget backgroundColor="black" font="Regular; 32" halign="right" position="1470,1009" render="Label" size="150,45" source="session.Event_Next" transparent="1">
+			<convert type="EventTime">Duration</convert>
+			<convert type="ClockToText">InMinutes</convert>
+		</widget>
+		<!--	Channel Number and Name	-->
+		<widget source="session.CurrentService" render="ChannelNumber" backgroundColor="StyleBackground" font="Regular; 40" foregroundColor="StyleFont2" halign="right" position="693,878" size="105,55" transparent="1" valign="center" zPosition="1" />
+		<widget source="session.CurrentService" render="Label" position="810,880" size="430,55" backgroundColor="StyleBackground" font="Regular; 40" foregroundColor="StyleFont2" transparent="1" halign="left">
+			<convert type="ServiceName">Name</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="1242,887" size="300,40" halign="left" zPosition="4" transparent="1" backgroundColor="StyleBackground" font="Regular; 28">
+			<convert type="ServiceName">Provider</convert>
+		</widget>
+		<!--	Icons	-->
+		<!---->
+		<widget alphatest="blend" pixmap="gb-fhd/icons/ico_hd_on.png" position="315,883" render="Pixmap" size="34,45" source="session.CurrentService" zPosition="2">
+			<convert type="ServiceInfo">VideoWidth</convert>
+			<convert type="ValueRange">721,1980</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<ePixmap alphatest="blend" pixmap="gb-fhd/icons/ico_hd_off.png" position="315,883" size="34,45" zPosition="1" />
+		<!---->
+		<widget alphatest="blend" pixmap="gb-fhd/icons/ico_format_on.png" position="359,883" render="Pixmap" size="58,45" source="session.CurrentService" zPosition="2">
+			<convert type="ServiceInfo">IsWidescreen</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<ePixmap alphatest="blend" pixmap="gb-fhd/icons/ico_format_off.png" position="359,883" size="58,45" zPosition="1" />
+		<!---->
+		<widget alphatest="blend" pixmap="gb-fhd/icons/ico_dolby_on.png" position="427,883" render="Pixmap" size="72,45" source="session.CurrentService" zPosition="2">
+			<convert type="ServiceInfo">IsMultichannel</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<ePixmap alphatest="blend" pixmap="gb-fhd/icons/ico_dolby_off.png" position="427,883" size="72,45" />
+		<!---->
+		<widget alphatest="blend" pixmap="gb-fhd/icons/ico_txt_on.png" position="509,883" render="Pixmap" size="51,45" source="session.CurrentService" zPosition="5">
+			<convert type="ServiceInfo">HasTelext</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<ePixmap alphatest="blend" pixmap="gb-fhd/icons/ico_txt_off.png" position="509,883" size="51,45" />
+		<!---->
+		<widget alphatest="blend" pixmap="gb-fhd/icons/ico_rec_on.png" position="570,883" render="Pixmap" size="44,45" source="session.RecordState" zPosition="2">
+			<convert type="ConditionalShowHide">Blink</convert>
+		</widget>
+		<ePixmap alphatest="blend" pixmap="gb-fhd/icons/ico_rec_off.png" position="570,883" size="44,45" />
+		<!---->
+		<widget alphatest="blend" pixmap="gb-fhd/icons/ico_crypt_on.png" position="624,883" render="Pixmap" size="68,45" source="session.CurrentService" zPosition="2">
+			<convert type="ServiceInfo">IsCrypted</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<ePixmap alphatest="blend" pixmap="gb-fhd/icons/ico_crypt_off.png" position="624,883" size="68,45" />
+		<!--	Tuner	-->
+		<!--A-->
+		<widget source="session.FrontendInfo" alphatest="blend" pixmap="gb-fhd/icons/tunera_on.png" position="125,885" render="Pixmap" size="100,40" zPosition="4">
+			<convert type="FrontendInfo">NUMBER</convert>
+			<convert type="ValueRange">0,0</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<!--B-->
+		<widget source="session.FrontendInfo" alphatest="blend" pixmap="gb-fhd/icons/tunerb_on.png" position="125,885" render="Pixmap" size="100,40" zPosition="4">
+			<convert type="FrontendInfo">NUMBER</convert>
+			<convert type="ValueRange">1,1</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<!--C-->
+		<widget source="session.FrontendInfo" alphatest="blend" pixmap="gb-fhd/icons/tunerc_on.png" position="125,885" render="Pixmap" size="100,40" zPosition="4">
+			<convert type="FrontendInfo">NUMBER</convert>
+			<convert type="ValueRange">2,2</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<!--D-->
+		<widget source="session.FrontendInfo" alphatest="blend" pixmap="gb-fhd/icons/tunerd_on.png" position="125,885" render="Pixmap" size="100,40" zPosition="4">
+			<convert type="FrontendInfo">NUMBER</convert>
+			<convert type="ValueRange">3,3</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<!--	ScreenTv	-->
+		<!--	SNR/AGC	-->
+		<eLabel backgroundColor="rds_text_bg" font="Regular; 24" halign="left" name="snr" position="98,940" size="70,30" text="SNR:" transparent="1" />
+		<widget backgroundColor="rds_text_bg" font="Regular; 24" halign="right" position="163,940" render="Label" size="85,30" source="session.FrontendStatus" transparent="1">
+			<convert type="FrontendInfo">SNR</convert>
+		</widget>
+		<widget source="session.FrontendStatus" render="Progress" position="98,970" size="150,12" zPosition="100" pixmap="gb-fhd/icons/snr_bar.png" transparent="1" borderWidth="2" borderColor="white">
+			<convert type="FrontendInfo">SNR</convert>
+		</widget>
+		<eLabel backgroundColor="rds_text_bg" font="Regular; 24" halign="left" name="agc" position="98,995" size="73,30" text="AGC:" transparent="1" />
+		<widget backgroundColor="rds_text_bg" font="Regular; 24" halign="right" position="163,995" render="Label" size="85,30" source="session.FrontendStatus" transparent="1">
+			<convert type="FrontendInfo">AGC</convert>
+		</widget>
+		<widget source="session.FrontendStatus" render="Progress" position="98,1025" size="150,12" zPosition="100" pixmap="gb-fhd/icons/agc_bar.png" transparent="1" borderWidth="2" borderColor="white">
+			<convert type="FrontendInfo">AGC</convert>
+		</widget>
+		<!--	Temperatur	-->
+		<ePixmap alphatest="blend" pixmap="gb-fhd/menu_png/temp2.png" position="1695,992" size="50,50" />
+		<ePixmap alphatest="blend" pixmap="gb-fhd/menu_png/cpu.png" position="1705,946" size="30,30" />
+		<eLabel text="SYS :" name="sys" backgroundColor="rds_text_bg" foregroundColor="StyleFont1" font="Regular; 23" halign="right" position="1735,984" size="80,36" zPosition="1" transparent="1" />
+		<widget source="global.CurrentTime" render="Style_SYSTemp" position="1820,981" size="80,36" font="Regular; 24" halign="center" valign="center" foregroundColor="StyleFont1" backgroundColor="rds_text_bg" transparent="1" zPosition="2" />
+		<eLabel text="CPU :" name="cpu" backgroundColor="rds_text_bg" foregroundColor="StyleFont1" font="Regular; 23" halign="right" position="1735,947" size="80,36" zPosition="1" transparent="1" />
+		<widget source="session.CurrentService" render="Label" position="1820,944" size="80,36" font="Regular; 24" halign="center" valign="center" foregroundColor="StyleFont1" backgroundColor="rds_text_bg" transparent="1" zPosition="5">
+			<convert type="StyleCpuUsage">
+			</convert>
+		</widget>
+		<eLabel text="HDD :" name="sys" backgroundColor="rds_text_bg" foregroundColor="StyleFont1" font="Regular; 23" halign="right" position="1735,1020" size="80,36" zPosition="1" transparent="1" />
+		<widget backgroundColor="rds_text_bg" font="Regular; 24" foregroundColor="StyleFont1" halign="right" position="1820,1019" render="Label" size="40,36" source="session.CurrentService" transparent="1" valign="center">
+			<convert type="StyleDiskInfo">HddTemp,Full</convert>
+		</widget>
+		<eLabel text="°C" position="1861,1016" size="40,36" font="Regular; 24" halign="left" backgroundColor="rds_text_bg" foregroundColor="StyleFont1" transparent="1" zPosition="2" valign="center" />
 		<!--	Xtra Bar	-->
-	<widget backgroundColor="StyleBack" font="Regular; 26" foregroundColor="StyleFont1" halign="left" position="315,27" render="Label" size="510,40" source="session.CurrentService" transparent="1" zPosition="1">
-		<convert type="StyleServiceName">%s / %O / %F %p %Y %f</convert>
-	</widget>
-	<widget source="session.CurrentService" render="Label" position="825,27" size="290,40" font="Regular; 26" backgroundColor="StyleBack" halign="center" transparent="1" foregroundColor="StyleFont1" text="N V I ND CO CW B N">
-		<convert type="StyleCryptobar">CryptoBar</convert>
-	</widget>
-	<widget source="session.CurrentService" render="Label" font="Regular; 23" position="1115,27" size="490,35" halign="center" zPosition="50" backgroundColor="StyleBack" transparent="1" noWrap="1" valign="center" foregroundColor="StyleFont1">
-		<convert type="CryptoInfo">VerboseInfo</convert>
-	</widget>
-	<!--	Clock	-->
-	<widget backgroundColor="StyleBackground" font="Regular; 50" foregroundColor="StyleFont2" halign="right" position="1705,873" render="Label" size="150,65" source="global.CurrentTime" transparent="1">
-		<convert type="ClockToText">Format:%H:%M</convert>
-	</widget>
-	<widget backgroundColor="rds_text_bg" font="Regular; 28" halign="right" position="1473,887" render="Label" size="232,40" source="global.CurrentTime" transparent="1" zPosition="10">
-		<convert type="ClockToText">Format:%a, %d. %B</convert>
-	</widget>
-	<!--	Clock	-->
-</screen>
+		<widget backgroundColor="StyleBack" font="Regular; 26" foregroundColor="StyleFont1" halign="left" position="315,27" render="Label" size="510,40" source="session.CurrentService" transparent="1" zPosition="1">
+			<convert type="StyleServiceName">%s / %O / %F %p %Y %f</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="825,27" size="290,40" font="Regular; 26" backgroundColor="StyleBack" halign="center" transparent="1" foregroundColor="StyleFont1" text="N V I ND CO CW B N">
+			<convert type="StyleCryptobar">CryptoBar</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" font="Regular; 23" position="1115,27" size="490,35" halign="center" zPosition="50" backgroundColor="StyleBack" transparent="1" noWrap="1" valign="center" foregroundColor="StyleFont1">
+			<convert type="CryptoInfo">VerboseInfo</convert>
+		</widget>
+		<!--	Clock	-->
+		<widget backgroundColor="StyleBackground" font="Regular; 50" foregroundColor="StyleFont2" halign="right" position="1705,873" render="Label" size="150,65" source="global.CurrentTime" transparent="1">
+			<convert type="ClockToText">Format:%H:%M</convert>
+		</widget>
+		<widget backgroundColor="rds_text_bg" font="Regular; 28" halign="right" position="1473,887" render="Label" size="232,40" source="global.CurrentTime" transparent="1" zPosition="10">
+			<convert type="ClockToText">Format:%a, %d. %B</convert>
+		</widget>
+		<!--	Clock	-->
+	</screen>
 	<screen backgroundColor="transparent" flags="wfNoBorder" name="SecondInfoBar" position="center,center" size="1920,1080" title="InfoBar">
 		<ePixmap pixmap="gb-fhd/back/infobar_new1A.png" position="center,710" size="1920,358" zPosition="-10" />
 		<ePixmap pixmap="gb-fhd/back/Label1A.png" position="center,5" size="1800,66" zPosition="-10" />
@@ -345,21 +345,21 @@
 			<convert type="ServiceName">Reference</convert>
 		</widget>
 		<!--	Event Now	-->
-		<widget backgroundColor="black" font="Regular; 40" foregroundColor="StyleSelection2" halign="left" render="StyleRunText" options="movetype=running,startpoint=0,direction=left,steptime=40,repeat=5,startdelay=2000,always=0" position="520,940" size="950,55" source="session.Event_Now" transparent="1">
-	<convert type="EventName">Name</convert>
-</widget>
-		<widget font="Regular; 40" halign="left" valign="center" noWrap="1" position="520,1003" render="StyleRunText" options="movetype=running,startpoint=0,direction=left,steptime=40,repeat=5,startdelay=2000,always=0" size="950,55" source="session.Event_Next" backgroundColor="black" transparent="1" zPosition="1" foregroundColor="StyleSelection2">
-	<convert type="EventName">Name</convert>
-</widget>
-		<widget backgroundColor="black" font="Regular; 32" foregroundColor="StyleSelection2" halign="left" position="315,948" render="Label" size="100,40" source="session.Event_Now" transparent="1">
+		<widget backgroundColor="black" font="Regular; 40" foregroundColor="StyleFont1" halign="left" render="StyleRunText" options="movetype=running,startpoint=0,direction=left,steptime=40,repeat=5,startdelay=2000,always=0" position="520,940" size="950,55" source="session.Event_Now" transparent="1">
+			<convert type="EventName">Name</convert>
+		</widget>
+		<widget font="Regular; 40" foregroundColor="StyleFont1" halign="left" valign="center" noWrap="1" position="520,1003" render="StyleRunText" options="movetype=running,startpoint=0,direction=left,steptime=40,repeat=5,startdelay=2000,always=0" size="950,55" source="session.Event_Next" backgroundColor="black" transparent="1" zPosition="1">
+			<convert type="EventName">Name</convert>
+		</widget>
+		<widget backgroundColor="black" font="Regular; 32" halign="left" position="315,948" render="Label" size="100,40" source="session.Event_Now" transparent="1">
 			<convert type="EventTime">StartTime</convert>
 			<convert type="ClockToText">Format:%H:%M</convert>
 		</widget>
-		<widget backgroundColor="black" font="Regular; 32" foregroundColor="StyleSelection2" halign="right" position="415,948" render="Label" size="100,40" source="session.Event_Now" transparent="1">
+		<widget backgroundColor="black" font="Regular; 32" halign="right" position="415,948" render="Label" size="100,40" source="session.Event_Now" transparent="1">
 			<convert type="EventTime">EndTime</convert>
 			<convert type="ClockToText">Format:%H:%M</convert>
 		</widget>
-		<widget backgroundColor="black" font="Regular; 32" foregroundColor="StyleSelection2" halign="right" position="1470,946" render="Label" size="150,45" source="session.Event_Now" transparent="1">
+		<widget backgroundColor="black" font="Regular; 32" halign="right" position="1470,946" render="Label" size="150,45" source="session.Event_Now" transparent="1">
 			<convert type="EventTime">Remaining</convert>
 			<convert type="RemainingToText">InMinutes</convert>
 		</widget>
@@ -368,15 +368,15 @@
 			<convert type="EventTime">Progress</convert>
 		</widget>
 		<!--	Event Next	-->
-		<widget backgroundColor="black" font="Regular; 32" foregroundColor="StyleSelection2" halign="left" position="315,1011" render="Label" size="100,40" source="session.Event_Next" transparent="1">
+		<widget backgroundColor="black" font="Regular; 32" halign="left" position="315,1011" render="Label" size="100,40" source="session.Event_Next" transparent="1">
 			<convert type="EventTime">StartTime</convert>
 			<convert type="ClockToText">Format:%H:%M</convert>
 		</widget>
-		<widget backgroundColor="black" font="Regular; 32" foregroundColor="StyleSelection2" halign="right" position="415,1011" render="Label" size="100,40" source="session.Event_Next" transparent="1">
+		<widget backgroundColor="black" font="Regular; 32" halign="right" position="415,1011" render="Label" size="100,40" source="session.Event_Next" transparent="1">
 			<convert type="EventTime">EndTime</convert>
 			<convert type="ClockToText">Format:%H:%M</convert>
 		</widget>
-		<widget backgroundColor="black" font="Regular; 32" foregroundColor="StyleSelection2" halign="right" position="1470,1009" render="Label" size="150,45" source="session.Event_Next" transparent="1">
+		<widget backgroundColor="black" font="Regular; 32" halign="right" position="1470,1009" render="Label" size="150,45" source="session.Event_Next" transparent="1">
 			<convert type="EventTime">Duration</convert>
 			<convert type="ClockToText">InMinutes</convert>
 		</widget>
@@ -2063,81 +2063,6 @@
 		<ePixmap alphatest="blend" pixmap="gb-fhd/buttons/key_green.png" position="435,1000" size="35,35" />
 		<widget backgroundColor="StyleDarkblue1" font="Regular; 28" halign="left" name="canceltext" position="210,998" size="220,40" transparent="1" zPosition="1" />
 		<widget backgroundColor="StyleDarkblue1" font="Regular; 28" halign="left" name="oktext" render="Label" position="475,998" size="220,40" transparent="1" zPosition="1" />
-		<!--	Clock	-->
-		<widget backgroundColor="StyleBackground" foregroundColor="StyleFont2" font="Regular; 50" halign="right" position="1596,39" render="Label" size="150,65" source="global.CurrentTime" transparent="1">
-			<convert type="ClockToText">Format:%H:%M</convert>
-		</widget>
-		<widget backgroundColor="StyleBackground" foregroundColor="StyleFont2" font="Regular; 28" halign="right" position="1308,53" render="Label" size="282,40" source="global.CurrentTime" transparent="1" zPosition="10">
-			<convert type="ClockToText">Format:%a, %d. %B</convert>
-		</widget>
-		<!--	Clock	-->
-	</screen>
-	<screen name="HarddiskSelection" title="Select HDD" backgroundColor="transparent" flags="wfNoBorder" position="center,center" size="1920,1080">
-		<ePixmap pixmap="gb-fhd/back/Label1B.png" position="center,42" size="1612,56" zPosition="-10" />
-		<eLabel name="" backgroundColor="StyleDarkblue1" foregroundColor="StyleDarkblue1" position="154,98" size="1612,950" halign="left" transparent="0" zPosition="-10" />
-		<!--	Widgets -->
-		<eLabel text="Select HDD" font="Regular; 34" backgroundColor="StyleBackground" halign="left" position="170,42" size="1145,50" transparent="1" valign="center" />
-		<widget name="hddlist" font="Regular; 28" itemHeight="50" backgroundColor="StyleDarkblue1" foregroundColor="StyleFont1" position="170,125" size="1020,850" transparent="1" />
-		<!--	Buttons	-->
-		<!--	Line / Label / Png	-->
-		<ePixmap pixmap="gb-fhd/back/877.png" alphatest="blend" position="1205,103" size="171,877" zPosition="-1" />
-		<ePixmap pixmap="gb-fhd/menu_png/menu.png" alphatest="blend" position="1270,center" size="100,100" zPosition="10" />
-		<eLabel backgroundColor="white" position="center,985" size="1580,3" zPosition="2" foregroundColor="white" />
-		<ePixmap pixmap="gb-fhd/menu_png/setup.png" alphatest="blend" position="1570,center" size="100,100" zPosition="10" />
-		<ePixmap pixmap="gb-fhd/menu_png/hdd.png" alphatest="blend" position="1420,center" size="100,100" zPosition="10" />
-		<!--	Clock	-->
-		<widget backgroundColor="StyleBackground" foregroundColor="StyleFont2" font="Regular; 50" halign="right" position="1596,39" render="Label" size="150,65" source="global.CurrentTime" transparent="1">
-			<convert type="ClockToText">Format:%H:%M</convert>
-		</widget>
-		<widget backgroundColor="StyleBackground" foregroundColor="StyleFont2" font="Regular; 28" halign="right" position="1308,53" render="Label" size="282,40" source="global.CurrentTime" transparent="1" zPosition="10">
-			<convert type="ClockToText">Format:%a, %d. %B</convert>
-		</widget>
-		<!--	Clock	-->
-	</screen>
-	<screen name="HarddiskSetup" title="Harddisk" backgroundColor="transparent" flags="wfNoBorder" position="center,center" size="1920,1080">
-		<ePixmap pixmap="gb-fhd/back/Label1B.png" position="center,42" size="1612,56" zPosition="-10" />
-		<eLabel name="" backgroundColor="StyleDarkblue1" foregroundColor="StyleDarkblue1" position="154,98" size="1612,950" halign="left" transparent="0" zPosition="-10" />
-		<!--	Widgets -->
-		<eLabel text="Harddisk Setup" font="Regular; 34" backgroundColor="StyleBackground" halign="left" position="170,42" size="1145,50" transparent="1" valign="center" />
-		<widget name="model" render="Label" font="Regular; 28" backgroundColor="StyleDarkblue1" foregroundColor="StyleFont1" position="170,125" size="1020,45" transparent="1" />
-		<widget name="capacity" render="Label" font="Regular; 28" backgroundColor="StyleDarkblue1" foregroundColor="StyleFont1" position="170,180" size="1020,45" transparent="1" />
-		<widget name="bus" render="Label" font="Regular; 28" backgroundColor="StyleDarkblue1" foregroundColor="StyleFont1" position="170,235" size="1020,45" transparent="1" />
-		<widget name="config" itemHeight="50" font="Regular; 28" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="StyleDarkblue1" foregroundColor="StyleFont1" position="170,290" size="1020,300" transparent="1" />
-		<widget source="introduction" render="Label" itemHeight="50" font="Regular; 28" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="StyleDarkblue1" foregroundColor="StyleFont1" position="170,600" size="1020,300" transparent="1" />
-		<widget alphatest="blend" name="HelpWindow" position="center,center" size="1,1" transparent="1" zPosition="1" />
-		<!--	Buttons	-->
-		<ePixmap alphatest="blend" pixmap="gb-fhd/buttons/key_red.png" position="170,1000" size="35,35" />
-		<ePixmap alphatest="blend" pixmap="gb-fhd/buttons/key_green.png" position="485,1000" size="35,35" />
-		<widget backgroundColor="StyleDarkblue1" font="Regular; 28" halign="left" name="key_red" position="210,998" size="270,40" transparent="1" zPosition="1" />
-		<widget backgroundColor="StyleDarkblue1" font="Regular; 28" halign="left" name="key_green" position="525,998" size="270,40" transparent="1" zPosition="1" />
-		<!--	Line / Label / Png	-->
-		<ePixmap pixmap="gb-fhd/back/877.png" alphatest="blend" position="1205,103" size="171,877" zPosition="-1" />
-		<ePixmap pixmap="gb-fhd/menu_png/menu.png" alphatest="blend" position="1270,center" size="100,100" zPosition="10" />
-		<eLabel backgroundColor="white" position="center,985" size="1580,3" zPosition="2" foregroundColor="white" />
-		<ePixmap pixmap="gb-fhd/menu_png/setup.png" alphatest="blend" position="1570,center" size="100,100" zPosition="10" />
-		<ePixmap pixmap="gb-fhd/menu_png/hdd.png" alphatest="blend" position="1420,center" size="100,100" zPosition="10" />
-		<!--	Clock	-->
-		<widget backgroundColor="StyleBackground" foregroundColor="StyleFont2" font="Regular; 50" halign="right" position="1596,39" render="Label" size="150,65" source="global.CurrentTime" transparent="1">
-			<convert type="ClockToText">Format:%H:%M</convert>
-		</widget>
-		<widget backgroundColor="StyleBackground" foregroundColor="StyleFont2" font="Regular; 28" halign="right" position="1308,53" render="Label" size="282,40" source="global.CurrentTime" transparent="1" zPosition="10">
-			<convert type="ClockToText">Format:%a, %d. %B</convert>
-		</widget>
-		<!--	Clock	-->
-	</screen>
-	<screen name="HarddiskWait" title="Select HDD" backgroundColor="transparent" flags="wfNoBorder" position="center,center" size="1920,1080">
-		<ePixmap pixmap="gb-fhd/back/Label1B.png" position="center,42" size="1612,56" zPosition="-10" />
-		<eLabel name="" backgroundColor="StyleDarkblue1" foregroundColor="StyleDarkblue1" position="154,98" size="1612,950" halign="left" transparent="0" zPosition="-10" />
-		<!--	Widgets -->
-		<eLabel text="Wait ..." font="Regular; 34" backgroundColor="StyleBackground" halign="left" position="170,42" size="1145,50" transparent="1" valign="center" />
-		<widget name="wait" font="Regular; 28" backgroundColor="StyleDarkblue1" foregroundColor="StyleFont1" position="170,125" size="1020,850" transparent="1" />
-		<!--	Buttons	-->
-		<!--	Line / Label / Png	-->
-		<ePixmap pixmap="gb-fhd/back/877.png" alphatest="blend" position="1205,103" size="171,877" zPosition="-1" />
-		<ePixmap pixmap="gb-fhd/menu_png/menu.png" alphatest="blend" position="1270,center" size="100,100" zPosition="10" />
-		<eLabel backgroundColor="white" position="center,985" size="1580,3" zPosition="2" foregroundColor="white" />
-		<ePixmap pixmap="gb-fhd/menu_png/setup.png" alphatest="blend" position="1570,center" size="100,100" zPosition="10" />
-		<ePixmap pixmap="gb-fhd/menu_png/hdd.png" alphatest="blend" position="1420,center" size="100,100" zPosition="10" />
 		<!--	Clock	-->
 		<widget backgroundColor="StyleBackground" foregroundColor="StyleFont2" font="Regular; 50" halign="right" position="1596,39" render="Label" size="150,65" source="global.CurrentTime" transparent="1">
 			<convert type="ClockToText">Format:%H:%M</convert>
@@ -7500,6 +7425,81 @@
 		</widget>
 		<!--	Clock	-->
 	</screen>
+	<screen name="HarddiskSelection" title="Select HDD" backgroundColor="transparent" flags="wfNoBorder" position="center,center" size="1920,1080">
+		<ePixmap pixmap="gb-fhd/back/Label1B.png" position="center,42" size="1612,56" zPosition="-10" />
+		<eLabel name="" backgroundColor="StyleDarkblue1" foregroundColor="StyleDarkblue1" position="154,98" size="1612,950" halign="left" transparent="0" zPosition="-10" />
+		<!--	Widgets -->
+		<eLabel text="Select HDD" font="Regular; 34" backgroundColor="StyleBackground" halign="left" position="170,42" size="1145,50" transparent="1" valign="center" />
+		<widget name="hddlist" font="Regular; 28" itemHeight="50" backgroundColor="StyleDarkblue1" foregroundColor="StyleFont1" position="170,125" size="1020,850" transparent="1" />
+		<!--	Buttons	-->
+		<!--	Line / Label / Png	-->
+		<ePixmap pixmap="gb-fhd/back/877.png" alphatest="blend" position="1205,103" size="171,877" zPosition="-1" />
+		<ePixmap pixmap="gb-fhd/menu_png/menu.png" alphatest="blend" position="1270,center" size="100,100" zPosition="10" />
+		<eLabel backgroundColor="white" position="center,985" size="1580,3" zPosition="2" foregroundColor="white" />
+		<ePixmap pixmap="gb-fhd/menu_png/setup.png" alphatest="blend" position="1570,center" size="100,100" zPosition="10" />
+		<ePixmap pixmap="gb-fhd/menu_png/hdd.png" alphatest="blend" position="1420,center" size="100,100" zPosition="10" />
+		<ePixmap position="1680,905" size="73,58" pixmap="gb-fhd/GBLogo.png" transparent="0" alphatest="blend" zPosition="-1" />
+		<!--	Clock	-->
+		<widget backgroundColor="StyleBackground" foregroundColor="StyleFont2" font="Regular; 50" halign="right" position="1596,39" render="Label" size="150,65" source="global.CurrentTime" transparent="1">
+			<convert type="ClockToText">Format:%H:%M</convert>
+		</widget>
+		<widget backgroundColor="StyleBackground" foregroundColor="StyleFont2" font="Regular; 28" halign="right" position="1308,53" render="Label" size="282,40" source="global.CurrentTime" transparent="1" zPosition="10">
+			<convert type="ClockToText">Format:%a, %d. %B</convert>
+		</widget>
+		<!--	Clock	-->
+	</screen>
+	<screen name="HarddiskSetup" title="Harddisk" backgroundColor="transparent" flags="wfNoBorder" position="center,center" size="1920,1080">
+		<ePixmap pixmap="gb-fhd/back/Label1B.png" position="center,42" size="1612,56" zPosition="-10" />
+		<eLabel name="" backgroundColor="StyleDarkblue1" foregroundColor="StyleDarkblue1" position="154,98" size="1612,950" halign="left" transparent="0" zPosition="-10" />
+		<!--	Widgets -->
+		<eLabel text="Harddisk Setup" font="Regular; 34" backgroundColor="StyleBackground" halign="left" position="170,42" size="1145,50" transparent="1" valign="center" />
+		<widget name="model" render="Label" font="Regular; 28" backgroundColor="StyleDarkblue1" foregroundColor="StyleFont1" position="170,125" size="1020,45" transparent="1" />
+		<widget name="capacity" render="Label" font="Regular; 28" backgroundColor="StyleDarkblue1" foregroundColor="StyleFont1" position="170,180" size="1020,45" transparent="1" />
+		<widget name="bus" render="Label" font="Regular; 28" backgroundColor="StyleDarkblue1" foregroundColor="StyleFont1" position="170,235" size="1020,45" transparent="1" />
+		<widget name="initializetext" render="Label" font="Regular; 28" backgroundColor="StyleDarkblue1" foregroundColor="StyleFont1" position="260,999" size="300,40" transparent="1" />
+		<widget alphatest="blend" name="HelpWindow" position="center,center" size="1,1" transparent="1" zPosition="1" />
+		<!--	Buttons	-->
+		<ePixmap alphatest="blend" pixmap="gb-fhd/buttons/key_ok.png" position="170,996" size="80,45" />
+		<ePixmap alphatest="blend" pixmap="gb-fhd/buttons/key_exit.png" position="570,996" size="80,45" />
+		<!--	Line / Label / Png	-->
+		<ePixmap pixmap="gb-fhd/back/877.png" alphatest="blend" position="1205,103" size="171,877" zPosition="-1" />
+		<ePixmap pixmap="gb-fhd/menu_png/menu.png" alphatest="blend" position="1270,center" size="100,100" zPosition="10" />
+		<eLabel backgroundColor="white" position="center,985" size="1580,3" zPosition="2" foregroundColor="white" />
+		<ePixmap pixmap="gb-fhd/menu_png/setup.png" alphatest="blend" position="1570,center" size="100,100" zPosition="10" />
+		<ePixmap pixmap="gb-fhd/menu_png/hdd.png" alphatest="blend" position="1420,center" size="100,100" zPosition="10" />
+		<ePixmap position="1680,905" size="73,58" pixmap="gb-fhd/GBLogo.png" transparent="0" alphatest="blend" zPosition="-1" />
+		<!--	Clock	-->
+		<widget backgroundColor="StyleBackground" foregroundColor="StyleFont2" font="Regular; 50" halign="right" position="1596,39" render="Label" size="150,65" source="global.CurrentTime" transparent="1">
+			<convert type="ClockToText">Format:%H:%M</convert>
+		</widget>
+		<widget backgroundColor="StyleBackground" foregroundColor="StyleFont2" font="Regular; 28" halign="right" position="1308,53" render="Label" size="282,40" source="global.CurrentTime" transparent="1" zPosition="10">
+			<convert type="ClockToText">Format:%a, %d. %B</convert>
+		</widget>
+		<!--	Clock	-->
+	</screen>
+	<screen name="HarddiskWait" title="Select HDD" backgroundColor="transparent" flags="wfNoBorder" position="center,center" size="1920,1080">
+		<ePixmap pixmap="gb-fhd/back/Label1B.png" position="center,42" size="1612,56" zPosition="-10" />
+		<eLabel name="" backgroundColor="StyleDarkblue1" foregroundColor="StyleDarkblue1" position="154,98" size="1612,950" halign="left" transparent="0" zPosition="-10" />
+		<!--	Widgets -->
+		<eLabel text="Wait ..." font="Regular; 34" backgroundColor="StyleBackground" halign="left" position="170,42" size="1145,50" transparent="1" valign="center" />
+		<widget name="wait" font="Regular; 28" backgroundColor="StyleDarkblue1" foregroundColor="StyleFont1" position="170,125" size="1020,850" transparent="1" />
+		<!--	Buttons	-->
+		<!--	Line / Label / Png	-->
+		<ePixmap pixmap="gb-fhd/back/877.png" alphatest="blend" position="1205,103" size="171,877" zPosition="-1" />
+		<ePixmap pixmap="gb-fhd/menu_png/menu.png" alphatest="blend" position="1270,center" size="100,100" zPosition="10" />
+		<eLabel backgroundColor="white" position="center,985" size="1580,3" zPosition="2" foregroundColor="white" />
+		<ePixmap pixmap="gb-fhd/menu_png/setup.png" alphatest="blend" position="1570,center" size="100,100" zPosition="10" />
+		<ePixmap pixmap="gb-fhd/menu_png/hdd.png" alphatest="blend" position="1420,center" size="100,100" zPosition="10" />
+		<ePixmap position="1680,905" size="73,58" pixmap="gb-fhd/GBLogo.png" transparent="0" alphatest="blend" zPosition="-1" />
+		<!--	Clock	-->
+		<widget backgroundColor="StyleBackground" foregroundColor="StyleFont2" font="Regular; 50" halign="right" position="1596,39" render="Label" size="150,65" source="global.CurrentTime" transparent="1">
+			<convert type="ClockToText">Format:%H:%M</convert>
+		</widget>
+		<widget backgroundColor="StyleBackground" foregroundColor="StyleFont2" font="Regular; 28" halign="right" position="1308,53" render="Label" size="282,40" source="global.CurrentTime" transparent="1" zPosition="10">
+			<convert type="ClockToText">Format:%a, %d. %B</convert>
+		</widget>
+		<!--	Clock	-->
+	</screen>
 	<screen name="HddMount" title="" backgroundColor="transparent" flags="wfNoBorder" position="center,center" size="1920,1080">
 		<ePixmap pixmap="gb-fhd/back/Label1B.png" position="center,42" size="1612,56" zPosition="-10" />
 		<eLabel name="" backgroundColor="StyleDarkblue1" foregroundColor="StyleDarkblue1" position="154,98" size="1612,950" halign="left" transparent="0" zPosition="-10" />
@@ -7516,11 +7516,11 @@
 		<widget backgroundColor="StyleDarkblue1" font="Regular; 28" halign="left" name="key_yellow" position="800,998" size="250,40" transparent="1" zPosition="1" />
 		<widget backgroundColor="StyleDarkblue1" font="Regular; 28" halign="left" name="key_blue" position="1095,998" size="250,40" transparent="1" zPosition="1" />
 		<!--	Line / Label / Png	-->
-		<ePixmap pixmap="gb-fhd/back/877.png" alphatest="blend" position="1205,103" size="171,877" zPosition="-1" />
-		<ePixmap pixmap="gb-fhd/menu_png/menu.png" alphatest="blend" position="1270,center" size="100,100" zPosition="10" />
+		<ePixmap pixmap="gb-fhd/back/877.png" alphatest="blend" position="1305,103" size="171,877" zPosition="-1" />
+		<ePixmap pixmap="gb-fhd/menu_png/menu.png" alphatest="blend" position="1370,center" size="100,100" zPosition="10" />
+		<ePixmap pixmap="gb-fhd/menu_png/hdd.png" alphatest="blend" position="1510,center" size="100,100" zPosition="10" />
 		<eLabel backgroundColor="white" position="center,985" size="1580,3" zPosition="2" foregroundColor="white" />
-		<ePixmap pixmap="gb-fhd/menu_png/setup.png" alphatest="blend" position="1570,center" size="100,100" zPosition="10" />
-		<ePixmap pixmap="gb-fhd/menu_png/hdd.png" alphatest="blend" position="1420,center" size="100,100" zPosition="10" />
+		<ePixmap pixmap="gb-fhd/menu_png/setup.png" alphatest="blend" position="1650,center" size="100,100" zPosition="10" />
 		<ePixmap position="1680,905" size="73,58" pixmap="gb-fhd/GBLogo.png" transparent="0" alphatest="blend" zPosition="-1" />
 		<!--	Clock	-->
 		<widget backgroundColor="StyleBackground" foregroundColor="StyleFont2" font="Regular; 50" halign="right" position="1596,39" render="Label" size="150,65" source="global.CurrentTime" transparent="1">
@@ -7582,11 +7582,11 @@
 			<convert type="TemplatedMultiContent">
 							{"template": [
 				MultiContentEntryPixmapAlphaTest(pos = (10, 5), size = (80, 80), png = 0),
-				MultiContentEntryText(pos = (85, 10), size = (600, 45), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1),
-				MultiContentEntryText(pos = (700, 10), size = (425, 45), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 2),
+				MultiContentEntryText(pos = (85, 10), size = (700, 45), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1),
+				MultiContentEntryText(pos = (800, 10), size = (425, 45), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 2),
 				],
 				"fonts": [gFont("Regular", 28)],
-				"itemHeight": 95
+				"itemHeight": 55
 				}
 			</convert>
 		</widget>
@@ -7629,7 +7629,8 @@
 		<widget name="readDisk" font="Regular; 28" backgroundColor="StyleDarkblue1" foregroundColor="StyleFont1" position="170,455" size="1020,45" transparent="1" />
 		<widget name="readCache" font="Regular; 28" backgroundColor="StyleDarkblue1" foregroundColor="StyleFont1" position="170,510" size="1020,45" transparent="1" />
 		<widget name="temp" font="Regular; 28" backgroundColor="StyleDarkblue1" foregroundColor="StyleFont1" position="170,565" size="1020,45" transparent="1" />
-		<widget name="config" itemHeight="50" font="Regular; 28" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="StyleDarkblue1" foregroundColor="StyleFont1" position="170,630" size="1020,300" transparent="1" />
+		<eLabel backgroundColor="StyleDarkRed" position="170,630" size="1020,3" zPosition="2" foregroundColor="StyleDarkRed" />
+		<widget name="config" itemHeight="50" font="Regular; 28" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="StyleDarkblue1" foregroundColor="StyleFont1" position="170,650" size="1020,300" transparent="1" />
 		<!--	Buttons	-->
 		<ePixmap alphatest="blend" pixmap="gb-fhd/buttons/key_red.png" position="170,1000" size="35,35" />
 		<ePixmap alphatest="blend" pixmap="gb-fhd/buttons/key_green.png" position="465,1000" size="35,35" />
@@ -7640,11 +7641,11 @@
 		<widget backgroundColor="StyleDarkblue1" font="Regular; 28" halign="left" name="key_yellow" position="800,998" size="250,40" transparent="1" zPosition="1" />
 		<widget backgroundColor="StyleDarkblue1" font="Regular; 28" halign="left" name="key_blue" position="1095,998" size="250,40" transparent="1" zPosition="1" />
 		<!--	Line / Label / Png	-->
-		<ePixmap pixmap="gb-fhd/back/877.png" alphatest="blend" position="1205,103" size="171,877" zPosition="-1" />
-		<ePixmap pixmap="gb-fhd/menu_png/menu.png" alphatest="blend" position="1270,center" size="100,100" zPosition="10" />
+		<ePixmap pixmap="gb-fhd/back/877.png" alphatest="blend" position="1305,103" size="171,877" zPosition="-1" />
+		<ePixmap pixmap="gb-fhd/menu_png/menu.png" alphatest="blend" position="1370,center" size="100,100" zPosition="10" />
+		<ePixmap pixmap="gb-fhd/menu_png/hdd.png" alphatest="blend" position="1510,center" size="100,100" zPosition="10" />
 		<eLabel backgroundColor="white" position="center,985" size="1580,3" zPosition="2" foregroundColor="white" />
-		<ePixmap pixmap="gb-fhd/menu_png/setup.png" alphatest="blend" position="1570,center" size="100,100" zPosition="10" />
-		<ePixmap pixmap="gb-fhd/menu_png/hdd.png" alphatest="blend" position="1420,center" size="100,100" zPosition="10" />
+		<ePixmap pixmap="gb-fhd/menu_png/setup.png" alphatest="blend" position="1650,center" size="100,100" zPosition="10" />
 		<ePixmap position="1680,905" size="73,58" pixmap="gb-fhd/GBLogo.png" transparent="0" alphatest="blend" zPosition="-1" />
 		<!--	Clock	-->
 		<widget backgroundColor="StyleBackground" foregroundColor="StyleFont2" font="Regular; 50" halign="right" position="1596,39" render="Label" size="150,65" source="global.CurrentTime" transparent="1">
@@ -7692,6 +7693,29 @@
 			<convert type="ClockToText">Format:%a, %d. %B</convert>
 		</widget>
 		<!--	Clock	-->
+	</screen>
+	<screen name="ExtraMessageBox" title="" backgroundColor="transparent" flags="wfNoBorder" position="center,center" size="1920,1080">
+		<ePixmap pixmap="gb-fhd/back/Label1B.png" position="center,42" size="1612,56" zPosition="-10" />
+		<eLabel name="" backgroundColor="StyleDarkblue1" foregroundColor="StyleDarkblue1" position="154,98" size="1612,950" halign="left" transparent="0" zPosition="-10" />
+		<!--	Widgets -->
+		<eLabel text="Extra Message Box" font="Regular; 34" backgroundColor="StyleBackground" halign="left" position="170,42" size="1145,50" transparent="1" valign="center" />
+		<widget name="message" font="Regular; 32" enableWrapAround="1" backgroundColor="StyleDarkblue1" foregroundColor="StyleFont1" position="170,125" size="1120,50" transparent="1" />
+		<eLabel backgroundColor="StyleDarkRed" position="170,180" size="1120,3" zPosition="2" foregroundColor="StyleDarkRed" />
+		<widget source="menu" render="Listbox" backgroundColor="StyleDarkblue1" foregroundColor="StyleFont1" scrollbarMode="showOnDemand" position="170,190" size="1120,780" transparent="1">
+			<convert type="TemplatedMultiContent">
+							{"template": [
+				MultiContentEntryPixmapAlphaTest(pos = (10, 5), size = (48, 48), png = 0),
+				MultiContentEntryText(pos = (85, 10), size = (825, 38), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1),
+					],
+				"fonts": [gFont("Regular", 28)],
+				"itemHeight": 58
+				}
+			</convert>
+		</widget>
+		<!--	Line / Label / Png	-->
+		<ePixmap pixmap="gb-fhd/back/877.png" alphatest="blend" position="1505,103" size="171,877" zPosition="-1" />
+		<ePixmap pixmap="gb-fhd/menu_png/menu.png" alphatest="blend" position="1570,center" size="100,100" zPosition="10" />
+		<eLabel backgroundColor="white" position="center,985" size="1580,3" zPosition="2" foregroundColor="white" />
 	</screen>
 	<screen name="ParentalControlChangePin" title="Change pin code" backgroundColor="transparent" flags="wfNoBorder" position="0,0" size="1920,1080">
 		<ePixmap pixmap="gb-fhd/back/number_zap.png" position="center,center" size="1120,200" zPosition="-10" />
@@ -7959,10 +7983,39 @@
 		<eLabel name="" backgroundColor="StyleDarkblue1" foregroundColor="StyleDarkblue1" position="154,98" size="1612,950" halign="left" transparent="0" zPosition="-10" />
 		<!--	Widgets -->
 		<eLabel text="Text Box" font="Regular; 34" backgroundColor="StyleBackground" halign="left" position="170,42" size="1145,50" transparent="1" valign="center" />
-		<widget name="text" font="Regular; 28" enableWrapAround="1" backgroundColor="StyleDarkblue1" foregroundColor="StyleFont1" position="170,125" size="1300,850" transparent="1" />
+		<widget name="text" font="Regular; 28" enableWrapAround="1" backgroundColor="StyleDarkblue1" foregroundColor="StyleFont1" position="170,125" size="1120,850" transparent="1" />
 		<!--	Line / Label / Png	-->
-		<ePixmap pixmap="gb-fhd/back/877.png" alphatest="blend" position="1505,103" size="171,877" zPosition="-1" />
-		<ePixmap pixmap="gb-fhd/menu_png/menu.png" alphatest="blend" position="1570,center" size="100,100" zPosition="10" />
+		<ePixmap pixmap="gb-fhd/back/877.png" alphatest="blend" position="1305,103" size="171,877" zPosition="-1" />
+		<ePixmap pixmap="gb-fhd/menu_png/menu.png" alphatest="blend" position="1370,center" size="100,100" zPosition="10" />
 		<eLabel backgroundColor="white" position="center,985" size="1580,3" zPosition="2" foregroundColor="white" />
+		<ePixmap position="1680,905" size="73,58" pixmap="gb-fhd/GBLogo.png" transparent="0" alphatest="blend" zPosition="-1" />
+		<!--	Clock	-->
+		<widget backgroundColor="StyleBackground" foregroundColor="StyleFont2" font="Regular; 50" halign="right" position="1596,39" render="Label" size="150,65" source="global.CurrentTime" transparent="1">
+			<convert type="ClockToText">Format:%H:%M</convert>
+		</widget>
+		<widget backgroundColor="StyleBackground" foregroundColor="StyleFont2" font="Regular; 28" halign="right" position="1308,53" render="Label" size="282,40" source="global.CurrentTime" transparent="1" zPosition="10">
+			<convert type="ClockToText">Format:%a, %d. %B</convert>
+		</widget>
+		<!--	Clock	-->
 	</screen>
-</skin>
+	<screen name="ExtraActionBox" title="" backgroundColor="transparent" flags="wfNoBorder" position="center,center" size="1920,1080">
+		<ePixmap pixmap="gb-fhd/back/Label1B.png" position="center,42" size="1612,56" zPosition="-10" />
+		<eLabel name="" backgroundColor="StyleDarkblue1" foregroundColor="StyleDarkblue1" position="154,98" size="1612,950" halign="left" transparent="0" zPosition="-10" />
+		<!--	Widgets -->
+		<eLabel text="Extra Action Box" font="Regular; 34" backgroundColor="StyleBackground" halign="left" position="240,42" size="1145,50" transparent="1" valign="center" />
+		<widget alphatest="blend" name="logo" position="170,45" size="48,48" transparent="1" zPosition="2" />
+		<widget name="message" font="Regular; 28" backgroundColor="StyleDarkblue1" foregroundColor="StyleFont1" position="170,125" size="1120,850" transparent="1" />
+		<!--	Line / Label / Png	-->
+		<ePixmap pixmap="gb-fhd/back/877.png" alphatest="blend" position="1305,103" size="171,877" zPosition="-1" />
+		<ePixmap pixmap="gb-fhd/menu_png/menu.png" alphatest="blend" position="1370,center" size="100,100" zPosition="10" />
+		<eLabel backgroundColor="white" position="center,985" size="1580,3" zPosition="2" foregroundColor="white" />
+		<ePixmap position="1680,905" size="73,58" pixmap="gb-fhd/GBLogo.png" transparent="0" alphatest="blend" zPosition="-1" />
+		<!--	Clock	-->
+		<widget backgroundColor="StyleBackground" foregroundColor="StyleFont2" font="Regular; 50" halign="right" position="1596,39" render="Label" size="150,65" source="global.CurrentTime" transparent="1">
+			<convert type="ClockToText">Format:%H:%M</convert>
+		</widget>
+		<widget backgroundColor="StyleBackground" foregroundColor="StyleFont2" font="Regular; 28" halign="right" position="1308,53" render="Label" size="282,40" source="global.CurrentTime" transparent="1" zPosition="10">
+			<convert type="ClockToText">Format:%a, %d. %B</convert>
+		</widget>
+		<!--	Clock	-->
+	</screen>
