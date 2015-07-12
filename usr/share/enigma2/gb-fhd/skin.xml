@@ -1,5 +1,5 @@
-<skin>
-	<!-- gb-fhd Skin v1.20 by SSD for GigaBlue/OpenMips -->
+﻿<skin>
+  <!-- gb-fhd Skin v1.20 by SSD for GigaBlue/OpenMips -->
 	<!-- Recommended to use with XPicons (220x132) -->
 	<!-- You are not allowed to modify and redistribute gb-fhd Skin and all graphics -->
 	<output id="0">
@@ -44,7 +44,7 @@
 		<font filename="tuxtxt.ttf" name="Console" scale="100" />
 		<font filename="gb-fhd/fonts/Style1.ttf" name="Regular" scale="100" />
 		<font filename="gb-fhd/fonts/Style3.ttf" name="Regular3" scale="100" />
-		<alias name="ChoiceList" font="Regular" size="28" height="50" />
+	<alias name="ChoiceList" font="Regular" size="28" height="50" />
 		<alias name="Body" font="Regular" size="28" height="50" />
 		<alias name="TextNormal" font="Regular" size="28" height="50" />
 		<alias name="FileList" font="Regular" size="28" height="50"/>
@@ -71,7 +71,7 @@
 		<alias name="PlayList" font="Regular" size="28" height="50"/>
 		<alias name="fstabMenuList" font="Regular" size="28" height="50"/>
 		<alias name="PiconManagerList" font="Regular" size="28" height="50"/>
-		<alias name="RSList" font="Regular" size="28" height="50"/>
+	<alias name="RSList" font="Regular" size="28" height="50"/>	
 	</fonts>
 	<subtitles>
 		<sub font="Regular;35" name="Subtitle_TTX" shadowColor="#shadow" shadowOffset="3,3" />
@@ -168,7 +168,7 @@
 		<parameter name="fstabMenuList" value="0,10,300,50,400,10,500,50" />
 		<parameter name="PiconManagerList" value="10,0,1920,50" />
 		<parameter name="RSList" value="40,0,1200,50,10,12,50,50" />
-		<parameter name="HotkeySetupSelectIcon" value="15, 0, 90, 76" />
+		<parameter name="HotkeySetupSelectIcon" value="15,0,90,76" />
 	</parameters>
 	<screen backgroundColor="transparent" flags="wfNoBorder" name="InfoBar" position="center,center" size="1920,1080" title="InfoBar">
 		<ePixmap pixmap="gb-fhd/back/infobar_new1A.png" position="center,710" size="1920,358" zPosition="-10" />
@@ -630,14 +630,14 @@
 		<widget position="428,470" render="Listbox" scrollbarMode="showOnDemand" size="1100,525" source="streams" transparent="1" zPosition="3">
 			<convert type="TemplatedMultiContent">
 															 {"templates":
-															 {"default": (50, [
+															 {"default": (50, [ 
 															 MultiContentEntryText(pos = (0, 5), size = (35, 35),	font = 0, flags = RT_HALIGN_LEFT,	text = 1), # key,
 															 MultiContentEntryText(pos = (10, 5), size = (50, 35),	font = 0, flags = RT_HALIGN_LEFT,	text = 2), # number,
 															 MultiContentEntryText(pos = (80, 5), size = (300, 35),	font = 0, flags = RT_HALIGN_LEFT,	text = 3), # description,
 															 MultiContentEntryText(pos = (380, 5), size = (400, 35), font = 0, flags = RT_HALIGN_LEFT,	text = 4), # language,
 															 MultiContentEntryText(pos = (950, 5), size = (25, 35),	font = 1, flags = RT_HALIGN_RIGHT, text = 5), # selection,
 															 ], True, "showNever"),
-															 "notselected": (50, [
+															 "notselected": (50, [ 
 															 MultiContentEntryText(pos = (0, 5),	 size = (35, 35),	font = 0, flags = RT_HALIGN_LEFT,	text = 1), # key,
 															 MultiContentEntryText(pos = (10, 5),	size = (50, 35),	font = 0, flags = RT_HALIGN_LEFT,	text = 2), # number,
 															 MultiContentEntryText(pos = (80, 5), size = (300, 35),	font = 0, flags = RT_HALIGN_LEFT,	text = 3), # description,
@@ -1469,7 +1469,7 @@
 			<convert type="TemplatedMultiContent">
 										{"template":[
 										MultiContentEntryPixmapAlphaBlend(pos=(12,5),size=(32,32),png=0),
-										MultiContentEntryText(pos=(58,3),size=(980,45),font=0,flags=RT_HALIGN_LEFT|RT_VALIGN_TOP,text=1),
+										MultiContentEntryText(pos=(58,3),size=(980,45),font=0,flags=RT_HALIGN_LEFT|RT_VALIGN_TOP,text=1), 
 										],
 										"fonts":[gFont("Regular",28) ],"itemHeight":50}
 					</convert>
@@ -1499,7 +1499,7 @@
 			<convert type="TemplatedMultiContent">
 										{"template":[
 										MultiContentEntryText(pos=(12,10),size=(900,45),font=0,flags=RT_HALIGN_LEFT|RT_VALIGN_TOP,text=0),
-										MultiContentEntryPixmapAlphaBlend(pos=(950,5),size=(40,40),png=1),
+										MultiContentEntryPixmapAlphaBlend(pos=(950,5),size=(40,40),png=1), 
 										],
 										"fonts":[gFont("Regular",28) ],"itemHeight":50}
 					</convert>
@@ -1534,7 +1534,7 @@
 			<convert type="TemplatedMultiContent">
 										{"template":[
 										MultiContentEntryText(pos=(12,10),size=(900,45),font=0,flags=RT_HALIGN_LEFT|RT_VALIGN_TOP,text=0),
-										MultiContentEntryPixmapAlphaBlend(pos=(950,5),size=(40,40),png=1),
+										MultiContentEntryPixmapAlphaBlend(pos=(950,5),size=(40,40),png=1), 
 										],
 										"fonts":[gFont("Regular",28) ],"itemHeight":50}
 					</convert>
@@ -3875,7 +3875,11 @@
 		<eLabel name="" backgroundColor="StyleDarkblue1" foregroundColor="StyleDarkblue1" position="154,98" size="1612,950" halign="left" transparent="0" zPosition="-10" />
 		<!--	Widgets -->
 		<widget source="Title" render="Label" font="Regular; 34" backgroundColor="StyleBackground" halign="left" position="170,42" size="1145,50" transparent="1" valign="center" />
-		<widget source="list" render="Listbox" position="170,125" size="1020,800" itemHeight="50" font="Regular; 28" scrollbarMode="showOnDemand" backgroundColor="StyleDarkblue1" foregroundColor="StyleFont1" enableWrapAround="1" zPosition="3" transparent="1">
+		<widget name="background" zPosition="1" position="170,125" size="1020,800" alphatest="on" />
+		<widget name="label1" backgroundColor="StyleDarkblue1" foregroundColor="StyleFont1" position="170,125" size="1020,45" font="Regular;28" halign="left" valign="center" zPosition="2" transparent="1" />
+		<widget name="label2" backgroundColor="StyleDarkblue1" foregroundColor="StyleFont1" position="170,175" size="1020,45" font="Regular;28" halign="left" valign="center" zPosition="2" transparent="1" />
+		<eLabel backgroundColor="StyleDarkRed" position="170,223" size="1020,3" zPosition="2" foregroundColor="StyleDarkRed" />
+		<widget source="list" render="Listbox" position="170,230" size="1020,700" itemHeight="50" font="Regular; 28" scrollbarMode="showOnDemand" backgroundColor="StyleDarkblue1" foregroundColor="StyleFont1" enableWrapAround="1" zPosition="3" transparent="1">
 			<convert type="StringList" />
 		</widget>
 		<!--	Buttons	-->
@@ -5370,9 +5374,9 @@
 		<!--	Widgets -->
 		<widget name="state" font="Regular; 34" backgroundColor="StyleBackground" foregroundColor="StyleFont1" halign="left" position="170,42" size="545,50" transparent="1" valign="center" />
 		<eLabel backgroundColor="StyleLine" position="170,95" size="1125,3" zPosition="1" />
-		<widget render="PositionGauge" position="170,94" size="1125,6" source="session.CurrentService" transparent="1" zPosition="4" pointer="gb-fhd/dvr/pointer.png:1125,6">
-			<convert type="ServicePosition">Gauge</convert>
-		</widget>
+		<widget render="PositionGauge" position="170,94" size="1125,6" source="session.CurrentService" transparent="1" zPosition="4" pointer="gb-fhd/extensions/pointer.png:1125,6">
+	<convert type="ServicePosition">Gauge</convert>
+</widget>
 		<widget source="session.CurrentService" render="Label" position="170,103" size="155,37" backgroundColor="StyleDarkblue1" zPosition="4" foregroundColor="StyleFont1" font="Regular;32" valign="center" halign="left" transparent="1">
 			<convert type="ServicePosition">Position,ShowHours</convert>
 		</widget>
@@ -5403,18 +5407,17 @@
 		<!--	Clock	-->
 	</screen>
 	<screen name="TranslationInfo" title="TranslationInfo" backgroundColor="transparent" flags="wfNoBorder" position="center,center" size="1920,1080">
-		<ePixmap pixmap="gb-fhd/back/Label1F.png" position="center,184" size="1000,56" zPosition="-10" />
-		<eLabel name="" backgroundColor="StyleDarkblue1" foregroundColor="StyleDarkblue1" position="center,center" size="1000,600" halign="left" transparent="0" zPosition="-10" />
-		<!--	Widgets -->
-		<eLabel text="Skin Info" font="Regular; 34" backgroundColor="StyleBackground" halign="left" position="470,184" size="945,50" transparent="1" valign="center" />
-		<eLabel text="(www.xtrend-alliance.com)" font="Regular; 28" backgroundColor="StyleDarkblue1" foregroundColor="StyleFont1" halign="right" position="center,785" size="900,50" transparent="1" valign="center" />
-		<!--	Buttons	-->
-		<!--	Line / Label / Png	-->
-		<ePixmap alphatest="blend" pixmap="gb-fhd/Style_XTA_FullHD.png" position="center,455" size="425,84" transparent="0" zPosition="-1" />
-		<ePixmap alphatest="blend" pixmap="gb-fhd/openxta.png" position="1220,703" size="190,82" transparent="0" zPosition="-1" />
-		<!--	Clock	-->
-		<!--	Clock	-->
-	</screen>
+	<ePixmap pixmap="gb-fhd/back/Label1F.png" position="center,184" size="1000,56" zPosition="-10" />
+	<eLabel name="" backgroundColor="StyleDarkblue1" foregroundColor="StyleDarkblue1" position="center,center" size="1000,600" halign="left" transparent="0" zPosition="-10" />
+	<!--	Widgets -->
+	<eLabel text="Skin Info" font="Regular; 34" backgroundColor="StyleBackground" halign="left" position="470,184" size="945,50" transparent="1" valign="center" />
+	<!--	Buttons	-->
+	<!--	Line / Label / Png	-->
+	<ePixmap alphatest="blend" pixmap="gb-fhd/Style_XTA_FullHD.png" position="center,455" size="425,84" transparent="0" zPosition="-1" />
+	<ePixmap alphatest="blend" pixmap="gb-fhd/openxta.png" position="1220,703" size="190,82" transparent="0" zPosition="-1" />
+	<ePixmap alphatest="blend" pixmap="gb-fhd/prev.png" position="center,center" size="280,210" transparent="1" zPosition="10" />
+	<ePixmap position="1076,749" size="355,58" pixmap="gb-fhd/GBLogo.png" transparent="0" alphatest="blend" zPosition="-1" />
+</screen>
 	<screen backgroundColor="transparent" flags="wfNoBorder" name="UpdatePluginMenu" position="center,center" size="1920,1080" title="Softwaremanager...">
 		<ePixmap pixmap="gb-fhd/back/Label1C.png" position="center,40" size="1920,62" zPosition="-10" />
 		<eLabel name="" backgroundColor="StyleDarkblue1" foregroundColor="StyleDarkblue1" position="72,102" size="1780,950" halign="left" transparent="0" zPosition="-10" />
@@ -5645,7 +5648,7 @@
 		<eLabel text="Select input device" font="Regular; 34" backgroundColor="StyleBackground" halign="left" position="170,42" size="1145,50" transparent="1" valign="center" />
 		<widget source="list" render="Listbox" backgroundColor="StyleDarkblue1" foregroundColor="StyleFont1" scrollbarMode="showOnDemand" enableWrapAround="1" position="170,125" size="1020,715" transparent="1">
 			<convert type="TemplatedMultiContent">
-											 {"template":
+											 {"template": 
 													 [ MultiContentEntryPixmapAlphaTest(pos = (5, 10), size = (54, 54), png = 2), # index 3 is the interface pixmap
 													 MultiContentEntryText(pos = (65, 5), size = (1100, 55), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER|RT_WRAP, text = 1), # index 1 is the interfacename
 													 ],
@@ -6823,7 +6826,7 @@
 			<convert type="TemplatedMultiContent">
 								{"template":[
 								MultiContentEntryPixmapAlphaBlend(pos=(12,7),size=(32,32),png=0),
-								MultiContentEntryText(pos=(58,7),size=(1100,42),font=0,flags=RT_HALIGN_LEFT|RT_VALIGN_TOP,text=1),
+								MultiContentEntryText(pos=(58,7),size=(1100,42),font=0,flags=RT_HALIGN_LEFT|RT_VALIGN_TOP,text=1), 
 								],
 								"fonts":[gFont("Regular",28) ],"itemHeight":50}
 						</convert>
